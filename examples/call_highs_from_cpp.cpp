@@ -75,8 +75,8 @@ int main() {
   model.lp_.sense_ = ObjSense::kMinimize;
   model.lp_.offset_ = 3;
   model.lp_.col_cost_ = {1.0, 1.0};
-  model.lp_.col_lower_ = {0.0, 1.0};
-  model.lp_.col_upper_ = {4.0, 1.0e30};
+    model.lp_.col_lower_ = {0.0, 1.0};
+    model.lp_.col_upper_ = {4.0, 1.0e30};
   model.lp_.row_lower_ = {-1.0e30, 5.0, 6.0};
   model.lp_.row_upper_ = {7.0, 15.0, 1.0e30};
   //
