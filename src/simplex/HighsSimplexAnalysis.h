@@ -2,9 +2,6 @@
 /*                                                                       */
 /*    This file is part of the HiGHS linear optimization suite           */
 /*                                                                       */
-/*    Written and engineered 2008-2024 by Julian Hall, Ivet Galabova,    */
-/*    Leona Gottwald and Michael Feldmeier                               */
-/*                                                                       */
 /*    Available as open-source under the MIT License                     */
 /*                                                                       */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -251,6 +248,7 @@ class HighsSimplexAnalysis {
   void reportFactorTimer();
   void updateInvertFormData(const HFactor& factor);
   void reportInvertFormData();
+  HighsInt numInvert() { return num_invert; }
 
   // Control methods to be moved to HEkkControl
   void dualSteepestEdgeWeightError(const double computed_edge_weight,

@@ -2,9 +2,6 @@
 /*                                                                       */
 /*    This file is part of the HiGHS linear optimization suite           */
 /*                                                                       */
-/*    Written and engineered 2008-2024 by Julian Hall, Ivet Galabova,    */
-/*    Leona Gottwald and Michael Feldmeier                               */
-/*                                                                       */
 /*    Available as open-source under the MIT License                     */
 /*                                                                       */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -17,7 +14,7 @@
 #include "pdlp/CupdlpWrapper.h"
 #include "simplex/HApp.h"
 
-// The method below runs simplex or ipx solver on the lp.
+// The method below runs simplex, ipx or pdlp solver on the lp.
 HighsStatus solveLp(HighsLpSolverObject& solver_object, const string message) {
   HighsStatus return_status = HighsStatus::kOk;
   HighsStatus call_status;

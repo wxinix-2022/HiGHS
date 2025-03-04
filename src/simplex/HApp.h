@@ -2,9 +2,6 @@
 /*                                                                       */
 /*    This file is part of the HiGHS linear optimization suite           */
 /*                                                                       */
-/*    Written and engineered 2008-2024 by Julian Hall, Ivet Galabova,    */
-/*    Leona Gottwald and Michael Feldmeier                               */
-/*                                                                       */
 /*    Available as open-source under the MIT License                     */
 /*                                                                       */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -111,6 +108,9 @@ inline HighsStatus solveLpSimplex(HighsLpSolverObject& solver_object) {
   // Reset the model status and HighsInfo values in case of premature
   // return
   resetModelStatusAndHighsInfo(solver_object);
+
+  // Initialise the simplex stats
+  ekk_instance.initialiseSimplexStats();
 
   // Assumes that the LP has a positive number of rows, since
   // unconstrained LPs should be solved in solveLp
